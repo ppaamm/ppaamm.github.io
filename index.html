@@ -15,6 +15,17 @@
 				hideAll();
 				$("#" + id).show();
 			}
+			
+			showBibtex = function(bibtex) {
+				document.getElementById('bibtex').innerText = bibtex;
+				modal = $("#myModal")[0];
+				modal.style.display = "block";
+			}
+			
+			closeModal = function() {
+				modal = $("#myModal")[0];
+				modal.style.display = "none";
+			}
 		</script>
 	</head>
 	
@@ -32,15 +43,22 @@
 	<div id="pages">
 		<div id="home">
 			<p><b>Welcome!</b></p>
-			<p>I am a postdoctoral researcher in the <a href="https://research.cs.aalto.fi/pml/">PML group</a> at Aalto University (Finland), working with Pr. Samuel Kaski. I used to work at Télécom ParisTech in the <a href="http://dbweb.enst.fr">DIG team</a> (former DBWeb), where I did my PhD under the supervision of <a href="http://www.dessalles.fr">Jean-Louis Dessalles</a> and <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Antoine Cornuéjols</a>. 
-			My research interests are learning theory and especially transfer learning. I work with the tools of algorithmic information theory (Kolmogorov complexity and Minimum Description Length Principle) and I am convinced that these tools might be a valuable alternative to statistical modeling when it comes to understanding why and when machine learning works.</p>
+			<p>I am a postdoctoral researcher in the <a href="https://research.cs.aalto.fi/pml/">PML group</a> at Aalto University (Finland), working with Pr. Samuel Kaski. I work on developping AI assistants which take into account the limitations, preferences and goals of the user. 
+			
+			<p>I used to work at Télécom ParisTech in the <a href="http://dbweb.enst.fr">DIG team</a> (former DBWeb), where I did my PhD under the supervision of <a href="http://www.dessalles.fr">Jean-Louis Dessalles</a> and <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Antoine Cornuéjols</a>. I defended my <a href="https://pastel.archives-ouvertes.fr/tel-02298695/document">PhD</a> in December 2018, in front of a jury composed of Pr. Florence d'Alché-Buc (president), Pr. Amaury Habrard (reviewer), Pr. Shai Ben-David (reviewer), Pr. Gilles Richard (examiner), Dr. Jean Lieber (examiner), Dr. Laurent Orseau (examiner). My work was rewarded by the second Best PhD award "Futur et Ruptures" of Institut Mines-Télécom  <a href="https://imtech.wp.imt.fr/2019/03/26/prix-de-la-fondation-mines-telecom-3-theses-en-3-minutes/">(link, in French)</a>.</p>
+			
+			<!--<p>My research interests are learning theory and especially transfer learning. I work with the tools of algorithmic information theory (Kolmogorov complexity and Minimum Description Length Principle) and I am convinced that these tools might be a valuable alternative to statistical modeling when it comes to understanding why and when machine learning works.</p>
 			
 			<p>I have also worked on a couple of thrilling side projects:</p>
 			<ul>
 				<li><p>Collaborative clustering: The idea is to exchange information between several clustering algorithms in order to make them refine their decisions. An interesting question I investigate: <i>What are the guarantees that collaborating is of any interest for the algorithms?</i></p></li>
 				<li><p>Analogical reasoning: How to evaluate the quality of statements of the form "A is to B what C is to D"?</p>
 				<li><p>Geometrical modeling of learning: Is it possible to represent the non-stationary of data by a riemannian curvature?</p></li> 
-			</ul>
+			</ul>-->
+			
+			<p>I have also worked (and am still working!) on the problem of analogical reasoning. From an empirical point of view, I am interested in showing how using Kolmogorov complexity can produce cognitively plausible results to analogical equations. From a formal point of view, I study the existence of continuous analogical proportions on manifolds, in particular manifolds of probability distributions.</p>
+			
+			<p>My papers and citations can be found on my <a href="https://scholar.google.com/citations?user=F41m-HsAAAAJ&hl=fr">Scholar</a> or <a href="https://dblp.org/pid/189/4601.html">DBLP</a> pages. </p>
 
 		</div>
 		
@@ -192,9 +210,9 @@
 		<div id="publications" style="display:none;">
 			<h2 class="page-title">Publications</h2>
 			<ul>
-				<li><p><b>Pierre-Alexandre Murena</b>, Marie Al-Ghossein, Jean-Louis Dessalles, Antoine Cornuéjols, <i>Solving Analogies on Words based on Minimal Complexity Transformation</i>, accepted at IJCAI-2020</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Marie Al-Ghossein, Jean-Louis Dessalles, Antoine Cornuéjols, <a href="articles/murena-IJCAI-2020.pdf"><i>Solving Analogies on Words based on Minimal Complexity Transformation</i></a>, accepted at IJCAI-2020. <span onclick="showBibtex('@inproceedings{ijcai2020-256,\ntitle     = {Solving Analogies on Words based on Minimal Complexity Transformation}, \nauthor    = {Murena, Pierre-Alexandre and Al-Ghossein, Marie and Dessalles, Jean-Louis and Cornuéjols, Antoine}, \nbooktitle = {Proceedings of the Twenty-Ninth International Joint Conference on Artificial Intelligence, {IJCAI-20}}, \npublisher = {International Joint Conferences on Artificial Intelligence Organization}, \neditor    = {Christian Bessiere}, \npages     = {1848--1854}, \nyear      = {2020}, \nmonth     = {7}, \nnote      = {Main track}, \ndoi       = {10.24963/ijcai.2020/256}, \nurl       = {https://doi.org/10.24963/ijcai.2020/256},\n}');">[bibtex]</span> <a href="https://www.youtube.com/watch?v=Ufj1yBeGmrQ">[short video]</a> <a href="https://www.youtube.com/watch?v=vqeEkVrjMdM">[long video]</a></p></li>
 				<li><p>Antoine Cornuéjols, <b>Pierre-Alexandre Murena</b>, Raphaël Olivier, <i>Transfer Learning by Learning Projections from Target to Source</i>, accepted at Symposium on Intelligent Data Analysis 2020, Constanz, Germany, April 27-29, 2020.</p></li>
-				<li><p>Marie Al Ghossein, <b>Pierre-Alexandre Murena</b>, Talel Abdessalem, Anthony Barré and  Antoine Cornuéjols , <i>Adaptive Collaborative Topic Modeling for Online Recommendation</i>, In Proceedings of the 12th ACM Conference on RecommenderSystems (pp. 338-346), Vancouver, Canada, October 2-7, 2018.</p></li>
+				<li><p>Marie Al Ghossein, <b>Pierre-Alexandre Murena</b>, Talel Abdessalem, Anthony Barré and  Antoine Cornuéjols , <a href="articles/murena-RecSys-2018.pdf"><i>Adaptive Collaborative Topic Modeling for Online Recommendation</i></a>, In Proceedings of the 12th ACM Conference on RecommenderSystems (pp. 338-346), Vancouver, Canada, October 2-7, 2018.</p></li>
 				<li><p><b>Pierre-Alexandre Murena</b>, Antoine Cornuéjols and Jean-Louis Dessalles, <a href="articles/murena-ICCBR-2018.pdf"><i>Opening the Parallelogram: Considerations on Non-Euclidean Analogies</i></a>, in Proceedings of (ICCBR 2018) the 26th International Conference on Case-Based Reasoning, Stockholm, Sweden, July 9-12, 2018.</p></li>
 				<li><p>Marie Al Ghossein, <b>Pierre-Alexandre Murena</b>, Antoine Cornuéjols and Talel Abdessalem, <a href="articles/murena-CBRML-2018.pdf"><i>Online Learning with Reoccurring Drifts: The Perspective of Case-Based Reasoning</i></a>, in Proceedings of ICCBR 2018 Workshop on Synergies between CBR and Machine Learning, Stockholm, Sweden, July 12, 2018.</p></li>
 				<li><p><b>Pierre-Alexandre Murena</b>, Jérémie Sublime, Basarab Matei and Antoine Cornuéjols, <a href="articles/murena-IJCAI-2018.pdf"><i>An Information Theory based Approach to Multisource Clustering</i></a>, in Proceedings of IJCAI-ECAI-2018 (Int. Joint Conf. on Artificial Intelligence), Stockholm, Sweden, July 13-19, 2018.</p></li>
@@ -204,6 +222,17 @@
 				<li><p>Jérémie Sublime, Basarab Matei and <b>Pierre-Alexandre Murena</b>, <a href="articles/murena-IJCNN-2017-2.pdf"><i>Analysis of the influence of diversity in collaborative and multi-view clustering</i></a>, in Proceedings of IJCNN-2017 (Int. Joint Conf. on Neural Networks), Anchorage, USA, May 14-19, 2017.</p></li>
 				<li><p><b>Pierre-Alexandre Murena</b> and Antoine Cornuéjols, <a href="articles/murena-IJCNN-2016.pdf"><i>Minimum Description Length Principle applied to Structure Adaptation for Classification under Concept Drift</i></a>, in Proceedings of IJCNN-2016 (Int. Joint Conf. on Neural Networks), Vancouver, Canada, July 25-29, 2016.</p></li>
 			</ul>
+			
+			<!-- Bibtex Modal -->
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+			  <div class="modal-content">
+				<span class="close" onclick="closeModal();">&times;</span>
+				<p id=bibtex></p>
+			  </div>
+
+			</div>
 		</div>
 	
 	</div>
