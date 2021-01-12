@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pierre-Alexandre Murena - Personal page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			hideAll = function() {
+				$("#pages").children().hide();
+			}
+			
+			showPage = function(id) {
+				hideAll();
+				$("#" + id).show();
+			}
+		</script>
+	</head>
+	
+	<h1>Pierre-Alexandre Murena</h1>
+	
+	<div id='cssmenu'>
+		<ul>
+			<li onclick="showPage('home');">Home</li>
+			<li onclick="showPage('publications');">Publications</li>
+			<li onclick="showPage('teaching');">Teaching</li>
+			<li onclick="showPage('contact');">Contact</li>
+		</ul>
+	</div>
+	
+	<div id="pages">
+		<div id="home">
+			<p><b>Welcome!</b></p>
+			<p>I am a postdoctoral researcher in the <a href="https://research.cs.aalto.fi/pml/">PML group</a> at Aalto University (Finland), working with Pr. Samuel Kaski. I used to work at Télécom ParisTech in the <a href="http://dbweb.enst.fr">DIG team</a> (former DBWeb), where I did my PhD under the supervision of <a href="http://www.dessalles.fr">Jean-Louis Dessalles</a> and <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Antoine Cornuéjols</a>. 
+			My research interests are learning theory and especially transfer learning. I work with the tools of algorithmic information theory (Kolmogorov complexity and Minimum Description Length Principle) and I am convinced that these tools might be a valuable alternative to statistical modeling when it comes to understanding why and when machine learning works.</p>
+			
+			<p>I have also worked on a couple of thrilling side projects:</p>
+			<ul>
+				<li><p>Collaborative clustering: The idea is to exchange information between several clustering algorithms in order to make them refine their decisions. An interesting question I investigate: <i>What are the guarantees that collaborating is of any interest for the algorithms?</i></p></li>
+				<li><p>Analogical reasoning: How to evaluate the quality of statements of the form "A is to B what C is to D"?</p>
+				<li><p>Geometrical modeling of learning: Is it possible to represent the non-stationary of data by a riemannian curvature?</p></li> 
+			</ul>
+
+		</div>
+		
+		<div id="contact" style="display:none;">
+			<p>You can contact me by email: first.last [at] aalto.fi </p>
+			<p>My workplace:</p>
+			<div id="addresses-list">
+				<ul>
+					<li>
+						<div class="address">
+							<p>Aalto University</p>
+							<p>Computer Science Department</p>
+							<p>Konemiehentie 2</p>
+							<p>02150 Espoo, FINLAND</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		
+		<div id="teaching" style="display:none;">
+			<h2 class="page-title">Teaching activities</h2>
+			
+			<h3 class="schoolyear-title" id="2019-2020">Aalto University - 2019-2020</h3>
+
+			<div class="course">
+				<h3>Introduction to Universal Artificial Intelligence</h3>
+				<ul>
+					<li><p>Introductory course to algorithmic information theory and the AIXI agent.</p></li>
+					<li><p>Six lectures: Plain complexity, Prefix Complexity, From complexity to probabilities, Sequence prediction and universal induction, The AIXI agent, Variants of the AIXI agent.</p></li>
+				</ul>
+			</div>
+
+			<h3 class="schoolyear-title" id="2017-2018">Télécom ParisTech - 2017-2018</h3>
+			
+			<div class="course">
+				<h3>Symbolic Natural Language Processing (SD213)</h3>
+				<ul>
+					<li><p>Lab sessions using Prolog</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/SNLP">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Logic and knowledge representation (SD206)</h3>
+				<ul>
+					<li><p>Lab sessions on logic programming and symbolic artificial intelligence.</p></li>
+					<li><p>Lecture: Representation, Complexity and Intelligence (<a href=courses/LKR2018-kolmogorov.pdf>slides</a>)</p></li>
+					<li><p>Discussion: Perspectives of Artificial Intelligence (<a href=courses/LKR2018-perspectives.pdf>slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/LRC">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Emergence in complex systems (Athens TPT09)</h3>
+				<ul>
+					<li><p>Lab sessions</p></li>
+					<li><p>Lecture: Introduction to Evolutionary Game Theory (<a href="courses/egt.pdf">slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/ECS">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>From Complexity to intelligence (Athens TPT37)</h3>
+				<ul>
+					<li><p>Lab sessions</p></li>
+					<li><p>Lecture: Inductive reasoning, Analogy (<a href="courses/FCI2017-analogy.pdf">slides</a>)</p></li>
+					<li><p>Lecture: Machine Learning and Complexity (<a href="courses/FCI2017-ml.pdf">slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/FCI">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Mining of massive data sets (SD201)</h3>
+				<ul>
+					<li><p>Lab sessions on MapReduce and classification</p></li>
+				</ul>
+				<p>Course supervised by Mauro Sozio (website <a href="https://sites.google.com/site/maurosozio/teaching/data-mining18">here</a>)</p>
+			</div>
+			
+			
+			<h3 class="schoolyear-title" id="2016-2017">Télécom ParisTech - 2016-2017</h3>
+			
+			<div class="course">
+				<h3>From Complexity to intelligence (Athens TPT37)</h3>
+				<ul>
+					<li><p>Lab sessions</p></li>
+					<li><p>Lecture: Inductive reasoning, Analogy (<a href="courses/slides-analogy.pdf">slides</a>)</p></li>
+					<li><p>Lecture: Machine Learning and Complexity (<a href="courses/slides-ML-complexity.pdf">slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/FCI">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Logic and knowledge representation (SD206)</h3>
+				<ul>
+					<li><p>Lab sessions on logic programming and symbolic artificial intelligence.</p></li>
+					<li><p>Lecture: Representation, Complexity and Intelligence</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/LRC">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Emergence in complex systems (Athens TPT09)</h3>
+				<ul>
+					<li><p>Lab sessions</p></li>
+					<li><p>Demonstration of Genetic Programming in Machine Learning (<a href="courses/genProgramming.pdf">slides</a>, <a href="courses/genProgramming.py">code</a>)</p></li>
+					<li><p>Lecture: Introduction to Evolutionary Game Theory (<a href="courses/egt.pdf">slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/ECS">here</a>)</p>
+			</div>
+			
+			
+			
+			
+			<h3 class="schoolyear-title" id="2015-2016">Télécom ParisTech - 2015-2016</h3>
+			
+			<div class="course">
+				<h3>Web development (SD203)</h3>
+				<p>Lab sessions on client technologies (HTML, JS, CSS), server technologies (PHP, CodeIgniter framework) and Internet security.</p>
+				<p>Course supervised by Pierre Senellart (website <a href="http://pierre.senellart.com/enseignement/2015-2016/sd203/">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Logic and knowledge representation (SD206)</h3>
+				<p>Lab sessions on logic programming and symbolic artificial intelligence.</p>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/LRC">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Emergence in complex systems (Athens TPT09)</h3>
+				<ul>
+					<li><p>Lab sessions</p></li>
+					<li><p>Demonstration of Genetic Programming in Machine Learning (<a href="courses/genProgramming.pdf">slides</a>, <a href="courses/genProgramming.py">code</a>)</p></li>
+					<li><p>Lecture: Introduction to Evolutionary Game Theory (<a href="courses/egt.pdf">slides</a>)</p></li>
+				</ul>
+				<p>Course supervised by Jean-Louis Dessalles (website <a href="http://teaching.dessalles.fr/ECS">here</a>)</p>
+			</div>
+			
+			<div class="course">
+				<h3>Advanced course on databases (SD208)</h3>
+				<p>Lab sessions on Oracle and Hadoop</p>
+				<p>Course supervised by Talel Abdessalem</p>
+			</div>
+			
+		</div>
+		
+		<div id="publications" style="display:none;">
+			<h2 class="page-title">Publications</h2>
+			<ul>
+				<li><p><b>Pierre-Alexandre Murena</b>, Marie Al-Ghossein, Jean-Louis Dessalles, Antoine Cornuéjols, <i>Solving Analogies on Words based on Minimal Complexity Transformation</i>, accepted at IJCAI-2020</p></li>
+				<li><p>Antoine Cornuéjols, <b>Pierre-Alexandre Murena</b>, Raphaël Olivier, <i>Transfer Learning by Learning Projections from Target to Source</i>, accepted at Symposium on Intelligent Data Analysis 2020, Constanz, Germany, April 27-29, 2020.</p></li>
+				<li><p>Marie Al Ghossein, <b>Pierre-Alexandre Murena</b>, Talel Abdessalem, Anthony Barré and  Antoine Cornuéjols , <i>Adaptive Collaborative Topic Modeling for Online Recommendation</i>, In Proceedings of the 12th ACM Conference on RecommenderSystems (pp. 338-346), Vancouver, Canada, October 2-7, 2018.</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Antoine Cornuéjols and Jean-Louis Dessalles, <a href="articles/murena-ICCBR-2018.pdf"><i>Opening the Parallelogram: Considerations on Non-Euclidean Analogies</i></a>, in Proceedings of (ICCBR 2018) the 26th International Conference on Case-Based Reasoning, Stockholm, Sweden, July 9-12, 2018.</p></li>
+				<li><p>Marie Al Ghossein, <b>Pierre-Alexandre Murena</b>, Antoine Cornuéjols and Talel Abdessalem, <a href="articles/murena-CBRML-2018.pdf"><i>Online Learning with Reoccurring Drifts: The Perspective of Case-Based Reasoning</i></a>, in Proceedings of ICCBR 2018 Workshop on Synergies between CBR and Machine Learning, Stockholm, Sweden, July 12, 2018.</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Jérémie Sublime, Basarab Matei and Antoine Cornuéjols, <a href="articles/murena-IJCAI-2018.pdf"><i>An Information Theory based Approach to Multisource Clustering</i></a>, in Proceedings of IJCAI-ECAI-2018 (Int. Joint Conf. on Artificial Intelligence), Stockholm, Sweden, July 13-19, 2018.</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Marie Al Ghossein, Talel Abdessalem and Antoine Cornuéjols, <a href="articles/murena-IJCNN-2018.pdf"><i>Adaptive Window Strategy for Topic Modeling in Document Streams</i></a>, in Proceedings of IJCNN-2018 (Int. Joint Conf. on Neural Networks), Rio, Brasil, July 8-13, 2018.</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Jean-Louis Dessalles and Antoine Cornuéjols, <a href="articles/murena-ICCBR-2017.pdf"><i>A complexity based approach for solving Hofstadter's analogies</i></a>, in Workshop on Computational Analogy, at ICCBR-2017 (Int. Conf. on Case-Based Reasoning), Trondheim, Norway, June 26-28, 2017. (<a href="articles/murena-ICCBR-2017-long.pdf">longer version</a>, not published)</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b>, Antoine Cornuéjols and Jean-Louis Dessalles, <a href="articles/murena-IJCNN-2017-1.pdf"><i>Incremental Learning with the Minimum Description Length Principle</i></a>, in Proceedings of IJCNN-2017 (Int. Joint Conf. on Neural Networks), Anchorage, USA, May 14-19, 2017.</p></li>
+				<li><p>Jérémie Sublime, Basarab Matei and <b>Pierre-Alexandre Murena</b>, <a href="articles/murena-IJCNN-2017-2.pdf"><i>Analysis of the influence of diversity in collaborative and multi-view clustering</i></a>, in Proceedings of IJCNN-2017 (Int. Joint Conf. on Neural Networks), Anchorage, USA, May 14-19, 2017.</p></li>
+				<li><p><b>Pierre-Alexandre Murena</b> and Antoine Cornuéjols, <a href="articles/murena-IJCNN-2016.pdf"><i>Minimum Description Length Principle applied to Structure Adaptation for Classification under Concept Drift</i></a>, in Proceedings of IJCNN-2016 (Int. Joint Conf. on Neural Networks), Vancouver, Canada, July 25-29, 2016.</p></li>
+			</ul>
+		</div>
+	
+	</div>
+</html>

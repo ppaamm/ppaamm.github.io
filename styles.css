@@ -1,0 +1,134 @@
+h1 {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+p {
+	font-size: large;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+a:link {
+	color: #107dbc;
+}
+a:visited  {
+	color: #43b0ef;
+}
+
+a:hover, a:active {
+	color: #107dbc;
+	background-color: #EEEEEE;
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu {
+  border-bottom: 3px solid #333333;
+  padding: 0 5px;
+  width: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #dddddd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align:center;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu ul li {
+  display: inline-block;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li {
+  font-size: 14px;
+  padding: 15px;
+  text-decoration: none;
+  color: #0e83cd;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  color: #333333;
+}
+@media all and (max-width: 640px) {
+  #cssmenu {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+  }
+  #cssmenu ul li,
+  #cssmenu.align-center,
+  #cssmenu.align-right {
+    display: block;
+  }
+}
+
+/** Address **/
+
+#addresses-list ul li {
+	display: inline-block;
+}
+
+.address {
+	margin: 10px;
+	border: 2px;
+	padding:10px;
+	background-color: #EEEEEE;
+	border-style: solid;
+}
+
+
+.page-title {
+	text-align: center;
+	font-style: bold;
+	margin-bottom: 40px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #073d5f;
+}
+
+/** Teaching **/
+
+#teaching h2,
+#teaching h3 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #073d5f;
+}
+
+
+
+h3.schoolyear-title {
+	text-align:center;
+	border-bottom: 2px solid #0c5e8d;
+}
+
+.course {
+	border-left: 1px solid #0c5e8d;
+	margin-bottom: 30px;
+	margin-left: 10px;
+	padding-left: 20px;
+}
+
+
