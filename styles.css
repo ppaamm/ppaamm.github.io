@@ -8,6 +8,23 @@ p {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+
+#pages {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 50px;
+}
+
+
+.bibtex {
+	color: #107dbc;
+}
+
+.bibtex:hover, active {
+	color: #107dbc;
+	background-color: #EEEEEE;
+}
+
 a:link {
 	color: #107dbc;
 }
