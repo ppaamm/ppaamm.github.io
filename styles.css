@@ -18,6 +18,7 @@ p {
 
 .bibtex {
 	color: #107dbc;
+	cursor: pointer;
 }
 
 .bibtex:hover, active {
@@ -72,6 +73,7 @@ a:hover, a:active {
 }
 #cssmenu ul li {
   display: inline-block;
+  cursor: pointer;
 }
 #cssmenu.align-right ul li {
   float: right;
