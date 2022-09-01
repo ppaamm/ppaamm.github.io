@@ -8,6 +8,9 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 			document.addEventListener('keydown', logKey);
+			document.addEventListener('click', detectClickOutsideModel);
+			
+			let modalOpened = false;
 
 			function logKey(e) {
 				if (e.keyCode === 27) { closeModal(); }
@@ -26,11 +29,22 @@
 				document.getElementById('bibtex').innerText = bibtex;
 				modal = $("#myModal")[0];
 				modal.style.display = "block";
+				modalOpened = true;
 			}
+			
+			function detectClickOutsideModel(event) {
+				const modal = $(".modal-content")[0];
+				if (!modal.contains(event.target) && modalOpened) {
+					closeModal();
+				}
+				
+			}
+
 			
 			closeModal = function() {
 				modal = $("#myModal")[0];
 				modal.style.display = "none";
+				modalOpened = false;
 			}
 		</script>
 	</head>
@@ -49,9 +63,11 @@
 	<div id="pages">
 		<div id="home">
 			<p><b>Welcome!</b></p>
-			<p>I am a postdoctoral researcher in the <a href="https://research.cs.aalto.fi/pml/">PML group</a> at Aalto University (Finland), working with Pr. Samuel Kaski. I work on developping AI assistants which take into account the limitations, preferences and goals of the user. 
+			<p>I am a postdoctoral researcher in the <a href="https://www2.helsinki.fi/en/researchgroups/multi-source-probabilistic-inference">Multi-Source Probabilistic Inference group</a> at the University of Helsinki (Finland). I work on developping AI assistants which take into account the limitations, preferences and goals of the user. </p>
 			
-			<p>I used to work at Télécom ParisTech in the <a href="http://dbweb.enst.fr">DIG team</a> (former DBWeb), where I did my PhD under the supervision of <a href="http://www.dessalles.fr">Jean-Louis Dessalles</a> and <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Antoine Cornuéjols</a>. I defended my <a href="https://pastel.archives-ouvertes.fr/tel-02298695/document">PhD</a> in December 2018, in front of a jury composed of Pr. Florence d'Alché-Buc (president), Pr. Amaury Habrard (reviewer), Pr. Shai Ben-David (reviewer), Pr. Gilles Richard (examiner), Dr. Jean Lieber (examiner), Dr. Laurent Orseau (examiner). My work was rewarded by the second Best PhD award "Futur et Ruptures" of Institut Mines-Télécom  <a href="https://imtech.wp.imt.fr/2019/03/26/prix-de-la-fondation-mines-telecom-3-theses-en-3-minutes/">(link, in French)</a>.</p>
+			<p>Previously, I was a postdoctoral researcher in the <a href="https://research.cs.aalto.fi/pml/">PML group</a> at Aalto University (Finland), working with Pr. Samuel Kaski. I was coordinating the team on Multi-Agent Modelling within the Finnish Center for Artificial Intelligence (FCAI).</p>
+			
+			<p>I did my PhD in Télécom ParisTech in the <a href="http://dbweb.enst.fr">DIG team</a> (former DBWeb), under the supervision of <a href="http://www.dessalles.fr">Jean-Louis Dessalles</a> and <a href="http://www.agroparistech.fr/ufr-info/membres/cornuejols/index.html">Antoine Cornuéjols</a>. I defended my <a href="https://pastel.archives-ouvertes.fr/tel-02298695/document">PhD</a> in December 2018, in front of a jury composed of Pr. Florence d'Alché-Buc (president), Pr. Amaury Habrard (reviewer), Pr. Shai Ben-David (reviewer), Pr. Gilles Richard (examiner), Dr. Jean Lieber (examiner), Dr. Laurent Orseau (examiner). My work was rewarded by the second Best PhD award "Futur et Ruptures" of Institut Mines-Télécom  <a href="https://imtech.wp.imt.fr/2019/03/26/prix-de-la-fondation-mines-telecom-3-theses-en-3-minutes/">(link, in French)</a>.</p>
 			
 			<!--<p>My research interests are learning theory and especially transfer learning. I work with the tools of algorithmic information theory (Kolmogorov complexity and Minimum Description Length Principle) and I am convinced that these tools might be a valuable alternative to statistical modeling when it comes to understanding why and when machine learning works.</p>
 			
@@ -62,7 +78,7 @@
 				<li><p>Geometrical modeling of learning: Is it possible to represent the non-stationary of data by a riemannian curvature?</p></li> 
 			</ul>-->
 			
-			<p>I have also worked (and am still working!) on the problem of analogical reasoning. From an empirical point of view, I am interested in showing how using Kolmogorov complexity can produce cognitively plausible results to analogical equations. From a formal point of view, I study the existence of continuous analogical proportions on manifolds, in particular manifolds of probability distributions.</p>
+			<p>I am very involved in the research field of analogical reasoning. My main contribution is a novel approach based on Kolmogorov complexity. I am also interested in the theoretical question of the existence of continuous analogical proportions on manifolds, in particular manifolds of probability distributions. I am co-chair of the IJCAI-ECAI'22 <a href="https://iarml2022-ijcai-ecai.loria.fr">Workshop on the Interactions between Analogical Reasoning and Machine Learning</a>. </p>
 			
 			<p>My papers and citations can be found on my <a href="https://scholar.google.com/citations?user=F41m-HsAAAAJ&hl=fr">Scholar</a> or <a href="https://dblp.org/pid/189/4601.html">DBLP</a> pages. </p>
 
